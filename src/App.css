@@ -1,38 +1,84 @@
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f4f8;
+  color: #333;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: #4CAF50;
   color: white;
+  padding: 1rem;
+  text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+.period-buttons {
+  margin: 1rem 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.period-buttons button {
+  background-color: white;
+  color: #4CAF50;
+  border: 1px solid #4CAF50;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.period-buttons button:hover {
+  background-color: #4CAF50;
+  color: white;
+  border: 1px solid white ;
+}
+
+.period-buttons button.active {
+  background-color: #4CAF50;
+  color: white;
+  border: 1px solid white ;
+}
+
+.content {
+  display: flex;
+  height: calc(100vh - 8rem);
+  overflow: hidden;
+}
+
+.table-container {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1rem;
+  background-color: white;
+  border-right: 1px solid #ddd;
+}
+
+.table-container table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-container th, .table-container td {
+  padding: 0.5rem;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.chart-container {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1rem;
+}
+
+.error {
+  color: red;
+  margin: 1rem 0;
 }
